@@ -1,0 +1,9 @@
+#include <stdio.h>
+int main(){
+	char palavra[] = "Felipe iori de souza";
+	int i;
+	for (i = 0; palavra[i] != '\0'; i++){
+		printf("%c", palavra[i]);
+		
+	}
+}
