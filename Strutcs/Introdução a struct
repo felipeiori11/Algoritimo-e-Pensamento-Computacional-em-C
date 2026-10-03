@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+struct Cliente {
+    int id;
+    float saldo;
+    char ini;
+};
+
+
+int main(){
+	
+    
+	
+	struct Cliente db[100];
+		
+	
+	
+	
+	
+	for(int i = 0; i < 5; i++){
+		printf("Digite o id do Cliente %d: ", i + 1);
+		scanf("%d", &db[i].id);
+		
+		printf("Digite o saldo do Cliente %d: ", i + 1);
+		scanf("%f", &db[i].saldo);
+		
+		printf("Digite a inicial do Cliente %d: ", i + 1);
+		scanf(" %c", &db[i].ini);
+		
+	}
+	printf("\nDADOS:\n");
+	for(int i = 0;i < 5; i++){
+		printf("\nPOS: %d\t | ID: %d\t | \tSALDO: %.2f\t | INICIAL: %c\t", i + 1, db[i].id, db[i].saldo, db[i].ini);
+	
+	}
+	
+	
+}
