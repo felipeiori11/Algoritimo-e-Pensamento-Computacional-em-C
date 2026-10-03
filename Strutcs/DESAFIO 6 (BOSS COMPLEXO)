@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+struct Produto {
+    int codigo;
+    float preco;
+};
+
+int main() {
+    struct Produto loja[3]; 
+    int i , indicemaior = 0; 
+    float maior;
+    int maiorind;
+    float maiorpreco;
+   
+	
+    
+    
+    for(i = 0; i < 3; i++) {
+        printf("\nProduto Indice [%d] - Codigo Fiscal: ", i);
+        scanf("%d", &loja[i].codigo); 
+        printf("Produto Indice [%d] - Preco: ", i);
+        scanf("%f", &loja[i].preco);
+    }
+   for( i = 1; i < 3; i++){
+   		if(loja[i].preco > maiorpreco){
+   			maiorpreco = loja[i].preco;
+   			maiorind = i;
+		   }
+   	
+   }
+   
+    printf("O Item mais valioso possui o Codigo: [%d]. ", loja[maiorind].codigo);
+    printf("Custando absurdos R$ %.2f\n", loja[maiorind].preco);
+    
+    
+    
+    
+    return 0;
+}
